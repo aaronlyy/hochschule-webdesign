@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <title>Features | angelsletter.com</title>
+</head>
+<body>
+  <header class="header__mobile">
+    <h1>angelsletter</h1>
+    <nav>
+
+      <div class="nav__dropdown-btn">
+        <span>Features</span>
+      </div>
+
+      <div class="nav__dropdown">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../pricing/#">Pricing</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+
+  <header class="header__desktop">
+    <h1>angelsletter</h1>
+    <nav>
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="#" id="nav__active">Features</a></li>
+        <li><a href="../pricing/">Pricing</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <script>
+
+    const dropdownButton = document.getElementsByClassName("nav__dropdown-btn")[0];
+    const dropdownMenu = document.getElementsByClassName("nav__dropdown")[0];
+
+    let open = false;
+
+    dropdownButton.addEventListener("click", () => {
+      if (!open) {
+        dropdownMenu.style.display = "flex";
+        open = true
+      }
+      else {
+        dropdownMenu.style.display = "none";
+        open = false;
+      }
+    })
+
+  </script>
+  
+</body>
+</html>
