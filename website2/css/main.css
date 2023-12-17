@@ -5,7 +5,7 @@
 
 :root {
   --text-color-main: #000;
-  --text-color-light: #000;
+  --text-color-light: #808080;
 
   font-size: 16px;
   font-family: "Outfit";
@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 h1 {
@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
   background-color: rgb(255, 255, 255);
 }
@@ -56,8 +57,12 @@ header.desktop {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  border-bottom: .5px solid black;
   height: 4rem;
+  gap: 1rem;
+}
+
+header.desktop img {
+  height: 1.5rem;
 }
 
 header.desktop nav ul {
@@ -70,9 +75,77 @@ header.desktop nav ul {
   width: 100%;
 }
 
+header.desktop nav ul li a {
+  color: var(--text-color-light);
+}
+
+header.desktop nav ul li a:hover {
+  color: var(--text-color-main);
+}
+
 main {
-  margin-top: 4rem;
+  margin-top: 5rem;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 1rem;
+  width: 80%;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 1rem;
+  width: 30rem;
+}
+
+.hero__text p {
+  text-wrap: wrap;
+}
+
+.hero__btn {
+  background-color: #000;
+  color: white;
+  padding: .5rem;
+  border-radius: 6px;
+  width: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  transition: all linear 50ms;
+}
+
+.hero__btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: var(--text-color-main);
+  
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.hero__image img {
+  width: 20rem;
 }
 
 footer {
@@ -84,6 +157,7 @@ footer {
   text-align: center;
   width: 100%;
   padding: 1rem;
+  font-size: .8rem;
 }
 
 .footer__links ul {
@@ -92,4 +166,8 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.footer__links ul li a, footer p {
+  color: var(--text-color-light);
 }
